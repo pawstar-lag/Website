@@ -1,0 +1,55 @@
+<div id="cookiesection">
+ <button>Ask a<img id="cookie" src="https://cdn.afterdawn.fi/v3/news/original/github-logo.png"/>question and click on me</button>
+</div>
+<script>var responses = [
+  "No", 
+  "Yes",
+  "Yeah, Duh!",
+  "YES!",
+  "Ask again later",//3 
+  "Maybe",//4
+  "I do not know",//5 
+  "Tomorrow",//6
+  "Go away!",//7
+   "Your input is random, so the output is going to be random.", //8
+ "You ask someone else!",//9
+  "No way",//10
+  "Arr me hearty! Me scurvy do not know!"//11
+];
+
+window.onload = function() {
+  let clickme = document.getElementById("cookiesection");
+  
+  clickme.onclick = giveResponse;
+  
+}
+
+function giveResponse() {
+  let id = Math.floor(Math.random() * responses.length)
+  
+  alert(responses[id])
+  
+  
+}
+
+function changeColor() {
+  let colorChange = document.getElementById("eye");
+  let colorNow = colorChange.style.backgroundColor;
+  
+  if (colorNow == "lightgreen") {
+    colorChange.style.background = "Navy"
+  } else {
+    colorChange.style.backgroundColor = "darkred";
+  }
+}</script>
+
+<style>#cookiesection{
+  width: 40px;
+  height: 20px;
+  margin:auto;
+  
+}
+#cookie{
+  height:40px;
+  font-size: 10%;
+}</style>
